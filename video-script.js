@@ -77,7 +77,7 @@ video.addEventListener('play', async () => {
 
 function loadLabeledImages() 
 {
-  const labels = ['KoKo','Phyu','Khant','Kaung']
+  const labels = ['Min','Phyu','Khant','Kaung']
   return Promise.all(
     labels.map(async label=> {
       const descriptions  = []
