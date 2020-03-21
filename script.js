@@ -37,7 +37,7 @@ async function start() {
 
 
 
-function loadLabeledImages()
+function loadLabeledImages() 
 {
   const labels = ['KoKo','Phyu']
   return Promise.all(
