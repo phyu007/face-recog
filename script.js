@@ -90,7 +90,7 @@ function loadLabeledImages() {
     labels.map(async label => {
       const descriptions = []
       for (let i = 1; i <= 2; i++) {
-        const img = await faceapi.fetchImage(`C:\Users\Phyu\Desktop\Angular + Ionic + firebase FaceDetection\Face\labeled_images`)
+        const img = await faceapi.fetchImage(`https://github.com/phyu007/face-recog/tree/master/labeled_images/${label}/${i}.jpg`)
         const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
         descriptions.push(detections.descriptor)
       }
