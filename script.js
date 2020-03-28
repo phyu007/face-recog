@@ -11,7 +11,7 @@ async function start() {
   container.style.position = 'relative'
   document.body.append(container)
   const labeledFaceDescriptors = await loadLabeledImages()
-  const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6)
+  const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6) // match here
   let image
   let canvas
   document.body.append('Loaded')
@@ -43,7 +43,7 @@ function loadLabeledImages()
   return Promise.all(
     labels.map(async label=> {
       const descriptions  = []
-      for ( let i = 1 ; i < 2 ; i++)
+      for ( let i = 1 ; i < 9 ; i++)
       {
         const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/phyu007/face-recog/master/labeled_images/${label}/${i}.PNG`)
         const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
